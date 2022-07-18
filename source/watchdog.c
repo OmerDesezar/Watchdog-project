@@ -180,7 +180,7 @@ static int SignalTask(void *arg)
 
 static int CheckSig1Task(void *argv)
 {
-    if (EXPECTED_SIGNALS != sig1_counter)
+    if (EXPECTED_SIGNALS > sig1_counter)
     {
         LogEvent(WARN, "Unexpected amount of signals recieved");
     }
